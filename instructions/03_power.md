@@ -1,5 +1,3 @@
-You should by now have had the opportunity to interact with two different statistical tests - "t-test" and "chi-squared" through the two specific applications I built to demonstrate these.
-
 With our t-test application, the different values of each input combination are fixed. This means that moving the sliders to change the parameters will always show the exact same results when coming back to the original settings. By interacting with this t-test application you should really get a sense of how the sample size, standard deviation, and effect size relate to the p-value in the absence of any uncertainty that randomness might introduce. 
 
 Our chi-squared application, however, does include randomness. This means that the distribution of the two groups within your sample changes every time you press the Resample button.

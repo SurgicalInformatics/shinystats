@@ -20,6 +20,8 @@ shinyUI(fluidPage(theme = shinytheme("cosmo"),
                                        
                                        sidebarLayout(
                                          sidebarPanel(
+                                           a(href="https://github.com/SurgicalInformatics/shinystats/blob/master/instructions/01_ttest.md",
+                                             "Click for instructions", target="_blank"),
                                            sliderInput("number",
                                                        "Number of observations (sample size per group):",
                                                        min = 5,
@@ -56,6 +58,8 @@ shinyUI(fluidPage(theme = shinytheme("cosmo"),
                                        tabPanel('Chi-squared',
                                                 sidebarLayout(
                                                   sidebarPanel(
+                                                    a(href="https://github.com/SurgicalInformatics/shinystats/blob/master/instructions/02_chisquared.md",
+                                                      "Click for instructions", target="_blank"),
                                                     sliderInput("sample_n",
                                                                 "Sample size:",
                                                                 min = 10,
@@ -83,6 +87,8 @@ shinyUI(fluidPage(theme = shinytheme("cosmo"),
                                        
                                        sidebarLayout(
                                          sidebarPanel(
+                                           a(href="https://github.com/SurgicalInformatics/shinystats/blob/master/instructions/03_power.md",
+                                             "Click for instructions", target="_blank"),
                                            fluidRow( 
                                                     actionButton("resample2", "Resample")
                                                     ),
