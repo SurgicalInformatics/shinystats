@@ -128,6 +128,7 @@ shinyUI(fluidPage(theme = shinytheme("cosmo"),
 
                               ),
                   fluidRow(
+                    column(12,
                     h4(strong("About ShinyStats:")),
                     p("“ShinyStats” is a series of web-based interactive applications (Apps) created using the R statistical programming language and an extension called Shiny.
                       Students are given already visualised sample data to interact with;
@@ -136,15 +137,15 @@ shinyUI(fluidPage(theme = shinytheme("cosmo"),
                       This level of experimentation gives the students a more thorough understanding of statistical concepts,
                       benefitting not only their own research and analysis but also the ability to understand the results quoted in published medical literature."),
                     h4(strong("ShinyStats is developed by")),
-                    a(href="http://www.ed.ac.uk/surgery/staff/surgical-profiles/riinu-ots", "Riinu Ots"),
+                    a(href="http://surgicalinformatics.org/about-us/", "Riinu Ots"),
                     h4(strong("with ongoing support from:")),
                     a(href="http://www.ed.ac.uk/institute-academic-development/learning-teaching/funding/funding", img(src="ptas_logo.jpeg", width = 270), target="_blank"),
                     a(href="http://www.essq.rcsed.ac.uk/", img(src="eso.png", width = 150), target="_blank"),
                     img(src='surginf_logo.png', width = 180)
-                  ),
-                  fluidRow(
+                  )),
+                  fluidRow(column(12,
                     h4(strong("ShinyStats is developed with:")),
                     a(href="https://shiny.rstudio.com/", img(src="shiny_logo.png", width = 150), target="_blank")
                   )
-                  )
+                  ))
 )
