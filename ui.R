@@ -18,7 +18,7 @@ shinyUI(fluidPage(theme = shinytheme("cosmo"),
                               tabPanel('t-test',
                                        
                                        sidebarLayout(
-                                         source(file.path("ui", "01_ttest.R"))$value,
+                                         source(here::here("ui", "01_ttest.R"))$value,
                                          # Show a plot of the generated distribution
                                          mainPanel(
                                            plotOutput("boxplot"),
@@ -30,7 +30,7 @@ shinyUI(fluidPage(theme = shinytheme("cosmo"),
                               #Chi-squared ----------------
                               tabPanel('Chi-squared',
                                        sidebarLayout(
-                                         source(file.path("ui", "02_chisquared.R"))$value,
+                                         source(here::here("ui", "02_chisquared.R"))$value,
                                          # Show a plot of the generated distribution
                                          mainPanel(
                                            plotOutput("onesample", width = "100%"),
@@ -44,7 +44,7 @@ shinyUI(fluidPage(theme = shinytheme("cosmo"),
                               tabPanel('Power',
                                        
                                        sidebarLayout(
-                                         source(file.path("ui", "03_power.R"))$value,
+                                         source(here::here("ui", "03_power.R"))$value,
                                          # Show a plot of the generated distribution
                                          mainPanel(
                                            plotOutput("powerplot")

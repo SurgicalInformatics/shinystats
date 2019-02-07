@@ -16,9 +16,9 @@ ggplot <- function(...) ggplot2::ggplot(...) +
 
 shinyServer(function(input, output) {
 
-  source(file.path("server", "01_ttest.R"),  local = TRUE)$value
-  source(file.path("server", "02_chisquared.R"),  local = TRUE)$value
-  source(file.path("server", "03_power.R"),  local = TRUE)$value
+  source(here::here("server", "01_ttest.R"),  local = TRUE)$value
+  source(here::here("server", "02_chisquared.R"),  local = TRUE)$value
+  source(here::here("server", "03_power.R"),  local = TRUE)$value
   
 })
 
