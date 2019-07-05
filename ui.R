@@ -52,8 +52,18 @@ fluidPage(theme = shinytheme("cosmo"),
                                  mainPanel(
                                    plotOutput("powerplot")
                                  )
-                               ))
+                               )),
                       # end Power-------
+                      # Linear Regression --------------
+                      tabPanel('Linear regression',
+                               shinyLP::iframe(width = "100%", height = "900", "https://argoshare.is.ed.ac.uk/multi_regression/")
+                               ),
+                      # end Linear regression-------
+                      # Bayes --------------
+                      tabPanel('Bayesian statistics',
+                               shinyLP::iframe(width = "100%", height = "950", "https://argoshare.is.ed.ac.uk/bayesian_two_proportions/")
+                      )
+                      # end Linear regression-------
                       # 
                       
           ),
