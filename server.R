@@ -14,13 +14,13 @@ ggplot <- function(...) ggplot2::ggplot(...) +
   theme(legend.position='top', legend.title=element_blank())
 
 
-shinyServer(function(input, output) {
+function(input, output) {
 
   source(here::here("server", "01_ttest.R"),  local = TRUE)$value
   source(here::here("server", "02_chisquared.R"),  local = TRUE)$value
   source(here::here("server", "03_power.R"),  local = TRUE)$value
   
-})
+}
 
 
 

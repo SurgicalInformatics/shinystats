@@ -7,7 +7,7 @@ sliderInput("number",
             max = 250,
             value = 20,
             step=5),
-checkboxInput("jitter", h4("Show individual observations"), FALSE),
+checkboxInput("jitter", h4("Show individual observations"), TRUE),
 sliderInput("standard_deviation",
             "Variability (standard deviation):",
             min = 0.1,
@@ -20,6 +20,7 @@ sliderInput("effect_size",
             max = 1.0,
             value = 0.2,
             step=0.05),
-p('Mean body temperature of Justin Beaver: 37.2 degrees Celcius'),
-textOutput('mean_otter')
+p("Mean body temperature of Justin Beaver: 37.2 degrees Celcius"),
+textOutput("mean_otter"),
+textOutput("mean_meerkat")
 )
