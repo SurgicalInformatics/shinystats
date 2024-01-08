@@ -34,11 +34,11 @@ output$onesample <- renderPlot({
   mydata %>% 
     ggplot(aes(x = x, y = y, fill = sex, colour = sampled, alpha=sampled, shape=sampled, size=sampled)) +
     geom_point(stroke = 2) +
-    scale_color_manual(values = c('white', 'black'), guide = FALSE) +
-    scale_fill_manual(values = c('#1f78b4', '#33a02c'), guide = FALSE) +
-    scale_alpha_manual(values = c(0.4, 1), guide = FALSE)+
-    scale_shape_manual(values = c(22, 21), guide = FALSE)+
-    scale_size_manual(values = c(8, 5), guide = FALSE) +
+    scale_color_manual(values = c('white', 'black'), guide = "none") +
+    scale_fill_manual(values = c('#1f78b4', '#33a02c'), guide = "none") +
+    scale_alpha_manual(values = c(0.6, 1), guide = "none")+
+    scale_shape_manual(values = c(22, 21), guide = "none")+
+    scale_size_manual(values = c(8, 5), guide = "none") +
     theme_void() +
     labs(subtitle = paste0("General population: ", true_prob*100, '% Blue, ', (1-true_prob)*100, '% Green'), 
          title = paste0('Your sample: ', label_data$label_formatted %>% paste0(collapse=', '))) +
