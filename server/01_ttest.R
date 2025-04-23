@@ -84,13 +84,16 @@ output$boxplot <- renderPlot({
     #geom_jitter(width=0.3, alpha=0.5) +
     geom_boxplot(alpha=0.5)+
     labs(y="Temperature", x='', title = "t-test") +
-    theme(title = element_text(size = 18)) +
+    theme(title = element_text(size = 18),
+          axis.text.x = element_text(size = 20, colour = "black"),
+          legend.text = element_text(size = 12, colour = "black")) +
     ylim(35,41.5) +
     # stat_summary(fun.data = mean_se, geom = "errorbar",
     #              colour='orange', width = 0.1,
     #              fun.args = list(mult = 1.96),
     #              size = 1) +
-    annotate('text', x='Justin Beaver', y=41.5, label = p_value, size=8, hjust = 0.2)
+    annotate('text', x='Harry Otter', y=41.5, label = p_value, size=10, hjust = 0.2) +
+    scale_x_discrete(labels = function(x) str_wrap(x, width = 10))
   
   if (input$jitter){
     plot = plot + geom_jitter(width=0.3, alpha=0.5) 
@@ -98,7 +101,7 @@ output$boxplot <- renderPlot({
   
   plot
   
-}, 280)
+}, 300)
 
 # boxplot 3 groups --------------
 output$boxplot3 <- renderPlot({
@@ -121,13 +124,16 @@ output$boxplot3 <- renderPlot({
     #geom_jitter(width=0.3, alpha=0.5) +
     geom_boxplot(alpha=0.5)+
     labs(y="Temperature", x='', title = "ANOVA") +
-    theme(title = element_text(size = 18)) +
+    theme(title = element_text(size = 18),
+          axis.text.x = element_text(size = 16, colour = "black"),
+          legend.text = element_text(size = 12, colour = "black")) +
     ylim(35,41.5) +
     # stat_summary(fun.data = mean_se, geom = "errorbar",
     #              colour='orange', width = 0.1,
     #              fun.args = list(mult = 1.96),
     #              size = 1) +
-    annotate('text', x='Justin Beaver', y=41.5, label = p_value, size=8, hjust = 0.2)
+    annotate('text', x='Harry Otter', y=41.5, label = p_value, size=8, hjust = 0.2) +
+    scale_x_discrete(labels = function(x) str_wrap(x, width = 10))
   
   if (input$jitter){
     plot = plot + geom_jitter(width=0.3, alpha=0.5) 
@@ -135,7 +141,7 @@ output$boxplot3 <- renderPlot({
   
   plot
   
-}, 280)
+}, 350)
 
 
 # text labels/sentences ---------------

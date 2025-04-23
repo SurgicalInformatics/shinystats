@@ -13,7 +13,7 @@ fluidPage(theme = shinytheme("cosmo"),
           
           
           # Sidebar with a slider input for number of bins
-          tabsetPanel(type = "tabs", selected = 'Power',
+          tabsetPanel(type = "tabs", selected = 't-test/ANOVA',
                       #t-test --------------
                       tabPanel('t-test/ANOVA',
                                
